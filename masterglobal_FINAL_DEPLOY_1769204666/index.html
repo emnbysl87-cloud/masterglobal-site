@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Master Global LLC — Amazon & E-Commerce Growth for Brands</title>
+  <meta name="description" content="Master Global LLC partners with brands to build sustainable, scalable growth on Amazon and global marketplaces. End-to-end operations, advertising, and brand protection." />
+  <meta name="theme-color" content="#2156ff" />
+  <style>
+    :root{
+      --bg1:#eef5ff; --bg2:#dbe8ff; --bg3:#f7f9ff;
+      --p1:#2156ff; --p2:#1537b8; --p3:#4aa3ff;
+      --t1:#0b1220; --t2:#6b7890;
+      --card:rgba(255,255,255,.82);
+      --stroke:rgba(13,25,54,.10);
+      --shadow:0 18px 50px rgba(12,28,72,.18);
+      --r-lg:18px; --r-xl:28px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      color:var(--t1);
+      background:
+        radial-gradient(1200px 700px at 12% 8%, #ffffff 0%, var(--bg1) 32%, var(--bg2) 62%, var(--bg3) 100%),
+        radial-gradient(900px 520px at 88% 18%, rgba(74,163,255,.22), transparent 60%),
+        radial-gradient(700px 420px at 70% 92%, rgba(33,86,255,.18), transparent 55%);
+      min-height:100vh;
+      overflow-x:hidden;
+    }
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+
+    .wrap{max-width:1200px;margin:0 auto;padding:22px 18px 60px}
+    header{
+      display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px;
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:saturate(140%) blur(10px);
+      background:linear-gradient(180deg, rgba(255,255,255,.72), rgba(255,255,255,.40));
+      border:1px solid rgba(255,255,255,.55);
+      border-radius:18px;
+      padding:12px 14px;
+      box-shadow:0 14px 30px rgba(12,28,72,.08);
+    }
+    .brand{display:flex;align-items:center;gap:12px;min-width:220px}
+    .logo{
+      width:44px;height:44px;border-radius:999px;
+      background:radial-gradient(circle at 30% 25%, #fff, #d6deef);
+      box-shadow:0 10px 22px rgba(0,0,0,.12);
+      display:flex;align-items:center;justify-content:center;overflow:hidden;
+    }
+    .logo img{width:40px;height:auto}
+    .btitle{font-weight:800;letter-spacing:.08em;font-size:14px}
+    .bsub{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--t2);margin-top:2px}
+    nav{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+    nav a{font-size:13px;color:var(--t2);font-weight:600}
+    nav a:hover{color:var(--p2)}
+    .cta{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:9px 14px;border-radius:999px;border:0;
+      background:linear-gradient(135deg,var(--p1),var(--p2));
+      color:#fff;font-weight:800;font-size:13px;cursor:pointer;
+      box-shadow:0 12px 26px rgba(33,86,255,.35);
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
+    .cta:hover{transform:translateY(-1px);box-shadow:0 16px 34px rgba(33,86,255,.42)}
+
+    .hero{
+      display:grid;
+      grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);
+      gap:18px;
+      margin-top:14px;
+    }
+    .panel{
+      border-radius:var(--r-xl);
+      background:linear-gradient(180deg, rgba(255,255,255,.86), rgba(245,249,255,.68));
+      border:1px solid rgba(255,255,255,.65);
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    .heroL{padding:26px 22px 24px}
+    .pill{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:6px 10px;border-radius:999px;
+      font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+      color:var(--p2);
+      background:rgba(33,86,255,.10);
+      border:1px solid rgba(33,86,255,.14);
+      margin-bottom:10px;
+    }
+    h1{
+      font-size:34px;line-height:1.12;letter-spacing:-.02em;
+      margin-bottom:10px;
+    }
+    .lead{color:var(--t2);font-size:14px;max-width:520px;line-height:1.6;margin-bottom:14px}
+    .actions{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:10px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.72);
+      background:rgba(15,23,42,.10);
+      color:#0b1220;font-weight:800;font-size:13px;cursor:pointer;
+      transition:transform .2s ease, background .2s ease;
+    }
+    .btn:hover{transform:translateY(-1px);background:rgba(15,23,42,.14)}
+    .btn.primary{
+      border:0;
+      background:linear-gradient(135deg,var(--p1),var(--p2));
+      color:#fff;
+      box-shadow:0 12px 26px rgba(33,86,255,.35);
+    }
+    .btn.primary:hover{background:linear-gradient(135deg,#2a62ff,#102f9f)}
+    .mini{color:var(--t2);font-size:12px}
+
+    .blob{
+      position:absolute;filter:blur(22px);opacity:.55;pointer-events:none;
+      animation:float 10s ease-in-out infinite;
+    }
+    .blob.b1{width:240px;height:240px;right:-80px;top:-90px;background:radial-gradient(circle at 30% 30%, rgba(74,163,255,.95), transparent 60%)}
+    .blob.b2{width:260px;height:260px;left:-120px;bottom:-120px;background:radial-gradient(circle at 40% 40%, rgba(33,86,255,.75), transparent 62%);animation-duration:12s}
+    @keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(0,14px)}}
+
+    .heroR{padding:18px;display:flex;flex-direction:column;gap:12px}
+    .card{
+      border-radius:18px;
+      background:rgba(255,255,255,.78);
+      border:1px solid var(--stroke);
+      box-shadow:0 14px 30px rgba(12,28,72,.10);
+      padding:14px 14px 12px;
+    }
+    .card h3{font-size:14px;margin-bottom:6px}
+    .card p{font-size:12px;color:var(--t2);line-height:1.6}
+    .check{margin-top:10px;display:grid;gap:8px}
+    .check li{list-style:none;display:flex;gap:10px;align-items:flex-start;font-size:12px;color:var(--t2)}
+    .dot{
+      width:16px;height:16px;border-radius:999px;
+      background:rgba(34,197,94,.16);color:#059669;
+      display:inline-flex;align-items:center;justify-content:center;font-size:11px;flex:0 0 auto;margin-top:2px
+    }
+
+    section{margin-top:34px}
+    .secHead{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;margin-bottom:14px}
+    .secHead h2{font-size:18px}
+    .secHead .sub{font-size:12px;color:var(--t2);max-width:520px;line-height:1.5}
+
+    .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .svc{
+      border-radius:18px;background:var(--card);border:1px solid var(--stroke);
+      box-shadow:0 14px 26px rgba(12,28,72,.10);
+      padding:14px;
+      transition:transform .18s ease, box-shadow .18s ease;
+    }
+    .svc:hover{transform:translateY(-3px);box-shadow:0 20px 34px rgba(12,28,72,.16)}
+    .tag{
+      display:inline-flex;gap:8px;align-items:center;
+      font-size:10px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;
+      padding:4px 9px;border-radius:999px;
+      background:rgba(33,86,255,.10);color:var(--p2);border:1px solid rgba(33,86,255,.14);
+      margin-bottom:8px;
+    }
+    .svc h4{font-size:14px;margin-bottom:6px}
+    .svc p{font-size:12px;color:var(--t2);line-height:1.6}
+
+    .partners{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+    .plogo{
+      height:74px;border-radius:16px;background:rgba(255,255,255,.82);
+      border:1px solid rgba(226,232,255,.9);
+      display:flex;align-items:center;justify-content:center;
+      box-shadow:0 10px 22px rgba(12,28,72,.08);
+      transition:transform .18s ease, box-shadow .18s ease;
+    }
+    .plogo:hover{transform:translateY(-2px);box-shadow:0 18px 32px rgba(12,28,72,.14)}
+    .plogo img{max-height:44px;width:auto;object-fit:contain}
+
+    .contact{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:16px}
+    .photo{
+      border-radius:18px;min-height:260px;
+      background:
+        radial-gradient(900px 500px at 20% 20%, rgba(255,255,255,.85), rgba(231,241,255,.70)),
+        radial-gradient(700px 400px at 80% 30%, rgba(74,163,255,.20), transparent 60%),
+        linear-gradient(135deg, rgba(33,86,255,.10), transparent);
+      border:1px solid rgba(255,255,255,.7);
+      box-shadow:var(--shadow);
+      padding:16px;display:flex;align-items:flex-end;overflow:hidden;position:relative;
+    }
+    .photo .note{
+      background:rgba(10,18,32,.88);color:#e8eeff;
+      border-radius:16px;padding:12px 12px;font-size:12px;max-width:360px
+    }
+    .form{
+      border-radius:18px;background:rgba(255,255,255,.86);
+      border:1px solid var(--stroke);box-shadow:0 14px 30px rgba(12,28,72,.12);
+      padding:16px;
+    }
+    .form h3{font-size:16px;margin-bottom:4px}
+    .form .p{font-size:12px;color:var(--t2);margin-bottom:12px;line-height:1.6}
+    .fg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+    label{font-size:11px;color:var(--t2)}
+    input,textarea{
+      width:100%;
+      padding:10px 10px;border-radius:12px;
+      border:1px solid rgba(120,140,190,.30);
+      background:rgba(255,255,255,.92);
+      outline:none;font:inherit;font-size:13px;
+      transition:border-color .15s ease, box-shadow .15s ease;
+    }
+    input:focus,textarea:focus{border-color:rgba(33,86,255,.75);box-shadow:0 0 0 3px rgba(33,86,255,.12)}
+    textarea{min-height:88px;resize:vertical}
+    .meta{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px;font-size:12px;color:var(--t2)}
+    .meta span{display:inline-flex;gap:8px;align-items:center}
+
+    .reveal{opacity:0;transform:translateY(10px);transition:opacity .55s ease, transform .55s ease}
+    .reveal.in{opacity:1;transform:none}
+    @media (prefers-reduced-motion:reduce){
+      .blob{animation:none}
+      .reveal{opacity:1;transform:none}
+      .svc,.plogo,.cta,.btn{transition:none}
+    }
+
+    @media (max-width: 980px){
+      .hero{grid-template-columns:1fr}
+      .grid3{grid-template-columns:repeat(2,1fr)}
+      .partners{grid-template-columns:repeat(3,1fr)}
+      .contact{grid-template-columns:1fr}
+      h1{font-size:30px}
+    }
+    @media (max-width: 640px){
+      nav{gap:12px}
+      .grid3{grid-template-columns:1fr}
+      .partners{grid-template-columns:repeat(2,1fr)}
+      h1{font-size:26px}
+      .fg{grid-template-columns:1fr}
+    }
+
+    footer{
+      margin-top:34px;
+      display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+      border-top:1px dashed rgba(140,160,210,.55);
+      padding-top:12px;color:var(--t2);font-size:12px
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap" id="top">
+    <header>
+      <div class="brand">
+        <div class="logo"><img src="assets/logo-mg.png" alt="Master Global LLC logo"></div>
+        <div>
+          <div class="btitle">MASTER GLOBAL LLC</div>
+          <div class="bsub">E-Commerce Solutions</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#partners">Our Partners</a>
+        <a href="#contact">Contact</a>
+        <button class="cta" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">Request a Call</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="panel heroL reveal">
+          <div class="blob b1"></div>
+          <div class="blob b2"></div>
+
+          <div class="pill">Global Marketplace Operations</div>
+          <h1>Amazon & E-Commerce<br/>Growth for Brands</h1>
+          <p class="lead">
+            Master Global LLC partners with brands to build sustainable, scalable growth on Amazon and global marketplaces.
+            From account setup to logistics, advertising and brand protection, we manage your end-to-end operations.
+          </p>
+
+          <div class="actions">
+            <button class="btn primary" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">Book a Strategy Call</button>
+            <button class="btn" onclick="document.querySelector('#services').scrollIntoView({behavior:'smooth'})">Explore Services</button>
+          </div>
+
+          <p class="mini"><b>Wyoming, USA</b> • +1 (812) 918-72-36 • info@masterglobal.online</p>
+        </div>
+
+        <div class="panel heroR reveal">
+          <div class="card">
+            <h3>What we deliver</h3>
+            <p>We act as your marketplace department — execution, reporting, and continuous optimization.</p>
+            <ul class="check">
+              <li><span class="dot">✓</span><span>Brand development & scalable growth strategy (pricing, positioning, market expansion)</span></li>
+              <li><span class="dot">✓</span><span>Brand partnership & authorized seller programs</span></li>
+              <li><span class="dot">✓</span><span>Listing optimization, PPC & data-driven growth</span></li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Premium, transparent process</h3>
+            <p>Weekly performance updates and a clear roadmap — built for long-term brand value.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="reveal">
+        <div class="secHead">
+          <div>
+            <h2>Our Core Services</h2>
+            <div class="sub">E-commerce consulting and tailored solutions for brands.</div>
+          </div>
+          <div class="sub" style="text-align:right">Built to scale across Amazon & global marketplaces.</div>
+        </div>
+
+        <div class="grid3">
+          <div class="svc">
+            <div class="tag">Operations</div>
+            <h4>Marketplace Operations</h4>
+            <p>Account health, catalog management, inventory planning, customer communication and day-to-day execution.</p>
+          </div>
+          <div class="svc">
+            <div class="tag">Growth</div>
+            <h4>Listing & Conversion</h4>
+            <p>Listing optimization, A+ content direction, brand store structure and conversion-focused improvements.</p>
+          </div>
+          <div class="svc">
+            <div class="tag">Advertising</div>
+            <h4>PPC & Performance</h4>
+            <p>Data-driven Sponsored Ads strategy with continual optimization for profitable growth.</p>
+          </div>
+          <div class="svc">
+            <div class="tag">Expansion</div>
+            <h4>Global Market Entry</h4>
+            <p>Launch support for new marketplaces, pricing & positioning, compliance and localization.</p>
+          </div>
+          <div class="svc">
+            <div class="tag">Partnership</div>
+            <h4>Authorized Seller Programs</h4>
+            <p>Brand partnerships and authorized seller structures that protect brand value and control distribution.</p>
+          </div>
+          <div class="svc">
+            <div class="tag">Protection</div>
+            <h4>Brand Protection</h4>
+            <p>Policy support, listing issue handling and anti-hijack best practices to keep your brand safe.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="partners" class="reveal">
+        <div class="secHead">
+          <div>
+            <h2>Our Partners</h2>
+            <div class="sub">A selection of brands we collaborate with across categories and regions.</div>
+          </div>
+        </div>
+
+        <div class="partners">
+          <div class="plogo"><img src="assets/partners/1.jpeg" alt="Partner logo 1"></div>
+          <div class="plogo"><img src="assets/partners/2.jpeg" alt="Partner logo 2"></div>
+          <div class="plogo"><img src="assets/partners/3.jpeg" alt="Partner logo 3"></div>
+          <div class="plogo"><img src="assets/partners/4.jpeg" alt="Partner logo 4"></div>
+          <div class="plogo"><img src="assets/partners/5.jpeg" alt="Partner logo 5"></div>
+          <div class="plogo"><img src="assets/partners/6.jpeg" alt="Partner logo 6"></div>
+          <div class="plogo"><img src="assets/partners/7.jpeg" alt="Partner logo 7"></div>
+          <div class="plogo"><img src="assets/partners/8.jpeg" alt="Partner logo 8"></div>
+        </div>
+      </section>
+
+      <section id="contact" class="reveal">
+        <div class="secHead">
+          <div>
+            <h2>Contact Us</h2>
+            <div class="sub">Tell us about your brand — we’ll share a clear roadmap and next steps.</div>
+          </div>
+        </div>
+
+        <div class="contact">
+          <div class="photo">
+            <div class="note">
+              <strong>Master Global LLC</strong><br/>
+              Amazon & global marketplace growth partner for brands.<br/><br/>
+              We respond within 1 business day.
+            </div>
+          </div>
+
+          <div class="form">
+            <h3>Request a strategy call</h3>
+            <div class="p">Fill the form and we’ll reach out with available times.</div>
+
+            <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Message sent! (Form endpoint can be connected later)');">
+              <div class="fg">
+                <div>
+                  <label>Name</label>
+                  <input required placeholder="Your name" />
+                </div>
+                <div>
+                  <label>Brand</label>
+                  <input placeholder="Brand / company name" />
+                </div>
+                <div>
+                  <label>Email</label>
+                  <input type="email" required placeholder="you@example.com" />
+                </div>
+                <div>
+                  <label>Marketplaces</label>
+                  <input placeholder="Amazon US, EU, your store..." />
+                </div>
+              </div>
+              <div style="margin-top:10px">
+                <label>Message</label>
+                <textarea placeholder="Your goals, challenges, and timing..."></textarea>
+              </div>
+              <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between">
+                <button class="cta" type="submit">Send Message</button>
+                <div class="meta">
+                  <span>📍 Wyoming, USA</span>
+                  <span>📞 +1 (812) 918-72-36</span>
+                  <span>✉️ info@masterglobal.online</span>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div>© 2026 Master Global LLC — E-Commerce Solutions</div>
+        <div><a href="#top">Back to top</a></div>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    const els = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {threshold: 0.12});
+    els.forEach(el=>io.observe(el));
+  </script>
+</body>
+</html>
